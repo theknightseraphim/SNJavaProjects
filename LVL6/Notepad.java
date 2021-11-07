@@ -7,9 +7,14 @@ public class Notepad {
         printIdea(new Idea());
     }
 
-    public static class Idea(){
+    public static class Idea {
         public String getDescription(){
-            return printIdea;
+            String write = "You can wrote here.";
+            return write;
         }
+    }
+
+    public static void printIdea(Idea idea) {
+        System.out.println(idea.getDescription());
     }
 }
