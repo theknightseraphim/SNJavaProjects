@@ -15,15 +15,15 @@ public class Coticki {
 
         while (true) {
             String name = reader.readLine();
-            int age = Integer.parseInt(reader.readLine());
-            int weight = Integer.parseInt(reader.readLine());
-            int tailLength = Integer.parseInt(reader.readLine());
+            String age = reader.readLine();
+            String weight = reader.readLine();
+            String tailLength = reader.readLine();
 
             if (name == null || name.isEmpty()) {
                 break;
             }
 
-            Cat cat = new Cat(name);
+            Cat cat = new Cat(name, age, weight, tailLength);
             CATS.add(cat);
         }
 
@@ -38,11 +38,11 @@ public class Coticki {
 
     public static class Cat {
         private String name;
-        private int age;
-        private int weight;
-        private int tailLength;
+        private String age;
+        private String weight;
+        private String tailLength;
 
-        Cat(String name) {
+        Cat(String name, String age, String weight, String tailLength) {
             this.name = name;
             this.age = age;
             this.weight = weight;
