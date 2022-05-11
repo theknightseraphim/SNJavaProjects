@@ -1,0 +1,12 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        int chislo1 = 16;
+        int chislo2 = 4;
+
+        if(Math.sqrt(chislo2) < chislo1){
+            System.out.println(Math.pow(chislo2, 5));
+        }
+        else System.out.println("Error");
+     }
+}
