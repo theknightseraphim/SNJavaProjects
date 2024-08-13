@@ -1,19 +1,25 @@
-package MyCodes;
+package SNJavaProjects.LVL6;
+import java.util.ArrayList;
 
+/*
+Статические коты
+*/
 public class Cat {
+    public static ArrayList<Cat> cats = new ArrayList<Cat>();
 
-    String name;
-    int age;
-
-    public Cat(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Cat() {
     }
 
     public static void main(String[] args) {
+        for (int i = 0; i < 10; i++){
+            cats.add(new Cat());
+        }
+        printCats();
+    }
 
-        Cat barsik = new Cat("Барсик", 5);
-        System.out.println(barsik.name);
-        System.out.println(barsik.age);
+    public static void printCats() {
+        for (int i = 0; i < cats.size(); i++){
+            System.out.println(cats.get(i));
+        }
     }
 }
